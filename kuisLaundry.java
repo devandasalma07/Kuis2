@@ -7,6 +7,8 @@ public class KuisLaundry {
         int n = sc.nextInt();
         int totalBerat = 0;
         int totalBiaya = 0;
+        int nim2; //2 digit NIM
+        int kapasitas;
 
         for (int i = 1; i <= n; i++) {
             System.out.print("Berat cucian pelanggan ke-" + i + " (kg): ");
@@ -25,6 +27,8 @@ public class KuisLaundry {
             totalBiaya += biaya;
             totalBerat += berat;
             System.out.println("  Biaya: Rp " + biaya);
+            
+            kapasitas = (nim2 % 10) + 10;
         }
 
         double rataBerat = totalBerat / n;
@@ -32,5 +36,7 @@ public class KuisLaundry {
         System.out.println("Total pemasukan : Rp " + totalBiaya);
         System.out.println("Rata-rata berat : " + rataBerat + " kg");
         System.err.println("biaya tertinggi: " + i);
+        System.out.println("Kapasitas mesin penuh setelah pelanggan ke: " + n);
+        System.out.println("Dilayani: " + i + "pelanggan");
     }
 }
