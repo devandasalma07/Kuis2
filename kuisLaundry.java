@@ -18,6 +18,9 @@ public class KuisLaundry {
                 biaya = 15000;
             } else {
                 biaya = 15000 + (berat - 3) * 4000;
+            } 
+            while (berat < 1 || berat > 20) {
+                System.out.println("Input tidak valid, ulangi.");
             }
             totalBiaya += biaya;
             totalBerat += berat;
@@ -28,5 +31,6 @@ public class KuisLaundry {
         System.out.println("=== REKAP HARIAN ===");
         System.out.println("Total pemasukan : Rp " + totalBiaya);
         System.out.println("Rata-rata berat : " + rataBerat + " kg");
+        System.err.println("biaya tertinggi: " + i);
     }
 }
